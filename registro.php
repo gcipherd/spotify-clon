@@ -1,7 +1,8 @@
 <?php
+    include("includes/config.php");
     include("includes/clases/Cuenta.php");
     include("includes/clases/Constantes.php");
-    $cuenta = new Cuenta();
+    $cuenta = new Cuenta($con);
     include("includes/handlers/registro-handler.php");
     include("includes/handlers/login-handler.php");
 
@@ -25,12 +26,13 @@
         <form id="loginFormulario" action="registro.php" method="POST">
             <h2>Accede a tu cuenta</h2>
             <p>
+                <?php echo $cuenta->obtenerError(Constantes::$loginFallo); ?>
                 <label for="loginUsuario">Usuario: </label>
                 <input id="loginUsuario" name="loginUsuario" type="text" placeholder="p. ej. bartSimpson" required>
             </p>
             <p>
-                <label for="loginPassword">Contraseña: </label>
-                <input id="loginPassword" name="loginPassword" type="password" placeholder="Tu contraseña" required>
+                <label for="loginContrasenna">Contraseña: </label>
+                <input id="loginContrasenna" name="loginContrasenna" type="password" placeholder="Tu contraseña" required>
             </p>
             <button type="submit" name="loginBoton">Iniciar sesión</button>
         </form>
@@ -39,6 +41,7 @@
             <h2>¡Crea una cuenta gratis!</h2>
             <p>
                 <?php echo $cuenta->obtenerError(Constantes::$usuarioCaracteres); ?>
+                <?php echo $cuenta->obtenerError(Constantes::$usuarioYaExiste); ?>
                 <label for="usuario">Usuario: </label>
                 <input id="usuario" name="usuario" type="text" placeholder="p. ej. bartSimpson" value="<?php obtenerValorEntrada('usuario') ?>" required>
             </p>
@@ -55,6 +58,7 @@
             <p>
                 <?php echo $cuenta->obtenerError(Constantes::$correosNoConcuerdan); ?>
                 <?php echo $cuenta->obtenerError(Constantes::$correoInvalido); ?>
+                <?php echo $cuenta->obtenerError(Constantes::$correoYaExiste); ?>
                 <label for="email">Correo electrónico </label>
                 <input id="email" name="email" type="email" placeholder="p. ej. bartSimpson@gmail.com" value="<?php obtenerValorEntrada('email') ?>" required>
             </p>
