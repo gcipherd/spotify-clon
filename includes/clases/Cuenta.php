@@ -1,9 +1,23 @@
 <?php
     class Cuenta {
         private $listaErrores;
+        private $con;
 
-        public function __construct() {
+        public function __construct($con) {
             $this->listaErrores = array();
+            $this->con = $con;
+        }
+
+        public function login($usuario, $contrasenna) {
+            $contrasenna = md5($contrasenna);
+
+            $query = mysqli_query($this->con, "SELECT * FROM usuario WHERE usuario = '$usuario' AND contrasenna = '$contrasenna'");
+            if(mysqli_num_rows($query) == 1) {
+                return true;
+            } else {
+                array_push($this->listaErrores, Constantes::$loginFallo);
+                return false;
+            }
         }
 
         public function registrar($usuario, $nombre, $apellido, $email, $email2, $contrasenna, $contrasenna2) {
@@ -15,7 +29,7 @@
 
             if (empty($this->listaErrores)) {
                 //Insertar a la BD
-                return true;
+                return $this->insertarDetallesUsuario($usuario, $nombre, $apellido, $email, $contrasenna);
             } else {
                 return false;
             }
@@ -28,12 +42,25 @@
             return "<span class='mensajeError'>$error</span>";
         }
 
+        private function insertarDetallesUsuario($usuario, $nombre, $apellido, $email, $contrasenna) {
+            $contrasennaEncriptada = md5($contrasenna);
+            $fotoPerfil = "assets/imagenes/fotos-perfil/head_emerald.png";
+            $fecha = date("Y-m-d");
+
+            $resultado = mysqli_query($this->con, "INSERT INTO usuario VALUES('', '$usuario', '$nombre', '$apellido', '$email', '$contrasennaEncriptada', '$fecha', '$fotoPerfil')");
+            return $resultado;
+        }
+
         private function validarUsuario($usuario) {
             if (strlen($usuario) > 25 || strlen($usuario) < 5) {
                 array_push($this->listaErrores, Constantes::$usuarioCaracteres);
                 return;
             }
-            //TODO: Checar que no exista el nombre de usuario
+            $checarUsuarioQuery = mysqli_query($this->con, "SELECT usuario FROM usuario WHERE usuario='$usuario'");
+            if(mysqli_num_rows($checarUsuarioQuery) != 0) {
+                array_push($this->listaErrores, Constantes::$usuarioYaExiste);
+                return;
+            }
         }
     
         private function validarNombre($nombre) {
@@ -59,7 +86,12 @@
                 array_push($this->listaErrores, Constantes::$correoInvalido);
                 return;
             }
-            //TODO: checar que no exista el correo
+            $checarCorreoQuery = mysqli_query($this->con, "SELECT email FROM usuario WHERE email='$email'");
+            if(mysqli_num_rows($checarCorreoQuery) != 0) {
+                array_push($this->listaErrores, Constantes::$correoYaExiste);
+                return;
+            }
+            
         }
     
         private function validarContrasennas($contrasenna, $contrasenna2) {
