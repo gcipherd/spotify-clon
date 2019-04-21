@@ -1,3 +1,15 @@
+<?php
+    include("includes/config.php");
+    //sesion_destroy(); //Descomentar para desloguear al usuario (se sustituirá después con una función).
+
+    //Checa si el usuario está logueado, sino, lo envía a la página de registro.
+    if(isset($_SESSION['usuarioLogueado'])) {
+        $usuarioLogueado = $_SESSION['usuarioLogueado'];
+    } else {
+        header("Location: registro.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

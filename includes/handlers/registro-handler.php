@@ -2,6 +2,7 @@
     function sanitizarUsuarioFormulario($textoEntrada) {
         $textoEntrada = strip_tags($textoEntrada); //Elimina posibles etiquetas que pueda haber.
         $textoEntrada = str_replace(" ", "", $textoEntrada); //Reemplaza espacios en blanco con una cadena vacía.
+        $textoEntrada = strtolower($textoEntrada);
         return $textoEntrada;
     }  
 
@@ -29,6 +30,7 @@
 
         $fueExitoso = $cuenta->registrar($usuario, $nombre, $apellido, $email, $email2, $contrasenna, $contrasenna2);
         if ($fueExitoso) {
+            $_SESSION['usuarioLogueado'] = $usuario; //Crea una sesión con el nombre de usuario del usuario
             header("Location: index.php"); //Te envía a index.php
         }
     }
