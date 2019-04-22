@@ -112,6 +112,15 @@
                     </div>
                 </form>
             </div>
+            <div id="loginTexto">
+                <h1>Obtén músical genial, ahora mismo!</h1>
+                <h2>Escucha muchísimas canciones, gratis!</h2>
+                <ul>
+                    <li>✔️ Descubre canciones y artistas que te fascinarán</li>
+                    <li>✔️ Crea tus propias listas de canciones</li>
+                    <li>✔️ Sigue a artistas favoritos</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

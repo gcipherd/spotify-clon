@@ -111,3 +111,28 @@ body {
 #loginFormulario {
     display: none;
 }
+
+#loginTexto {
+    padding: 45px;
+    display: table-cell;   
+}
+
+#loginTexto h1{
+    color: #07d159;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#loginTexto h2{
+    margin: 35px 0;
+}
+
+#loginTexto ul {
+    padding: 0;
+}
+
+#loginTexto li {
+    font-size: 20px;
+    list-style-type: none;
+    padding: 5px 0; 
+}
