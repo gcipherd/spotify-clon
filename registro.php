@@ -52,7 +52,7 @@
                     <p>
                         <?php echo $cuenta->obtenerError(Constantes::$loginFallo); ?>
                         <label for="loginUsuario">Usuario: </label>
-                        <input id="loginUsuario" name="loginUsuario" type="text" placeholder="p. ej. bartSimpson" required>
+                        <input id="loginUsuario" name="loginUsuario" type="text" placeholder="p. ej. bartSimpson" value="<?php obtenerValorEntrada('loginUsuario') ?>" required>
                     </p>
                     <p>
                         <label for="loginContrasenna">Contraseña: </label>
