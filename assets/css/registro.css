@@ -99,6 +99,7 @@ body {
 .tieneCuentaTexto span {
     font-weight: bold;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .tieneCuentaTexto {
@@ -109,9 +110,4 @@ body {
 #registroFormulario,
 #loginFormulario {
     display: none;
-}
-
-#ocultarLogin,
-#ocultarRegistro {
-    cursor: pointer;
 }

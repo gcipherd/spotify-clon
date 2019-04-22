@@ -21,15 +21,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify (Clon)</title>
     <link rel="stylesheet" type="text/css" href="assets/css/registro.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/registro.js"></script>
 </head>
 <body>
     <?php
-    /* Divide los bloques de login y formulario, y evita que aparezca el otro mientras en caso de que haya un error
-       en el ingreso de los datos.
-    */ 
+    /* Divide los bloques de login y formulario, y evita que, en el caso de mostrar un error por un mal ingreso
+    de los datos (de login o registro), se muestre el otro.*/ 
         if(isset($_POST['registroBoton'])) {
             echo '<script>
                     $(document).ready(function() {
