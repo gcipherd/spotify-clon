@@ -26,6 +26,26 @@
     <script type="text/javascript" src="assets/js/registro.js"></script>
 </head>
 <body>
+    <?php
+    /* Divide los bloques de login y formulario, y evita que aparezca el otro mientras en caso de que haya un error
+       en el ingreso de los datos.
+    */ 
+        if(isset($_POST['registroBoton'])) {
+            echo '<script>
+                    $(document).ready(function() {
+                        $("#loginFormulario").hide();
+                        $("#registroFormulario").show();
+                    });
+                </script>';        
+        } else {
+            echo '<script>
+                    $(document).ready(function() {
+                        $("#loginFormulario").show();
+                        $("#registroFormulario").hide();
+                    });
+                </script>';
+        }
+    ?>
     <div id="background">
         <div id="loginContenedor">
             <div id="inputContenedor">

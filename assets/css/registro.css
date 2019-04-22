@@ -104,3 +104,14 @@ body {
 .tieneCuentaTexto {
     text-align: center;
 }
+
+/* Evita que cualquiera de los bloques aparezcan por un breve momento al recargar la página o mostrar un error.*/
+#registroFormulario,
+#loginFormulario {
+    display: none;
+}
+
+#ocultarLogin,
+#ocultarRegistro {
+    cursor: pointer;
+}
