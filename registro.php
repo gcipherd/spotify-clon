@@ -21,6 +21,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify (Clon)</title>
     <link rel="stylesheet" type="text/css" href="assets/css/registro.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/registro.js"></script>
 </head>
 <body>
     <div id="background">
@@ -38,6 +41,10 @@
                         <input id="loginContrasenna" name="loginContrasenna" type="password" placeholder="Tu contraseña" required>
                     </p>
                     <button type="submit" name="loginBoton">Iniciar sesión</button>
+
+                    <div class="tieneCuentaTexto">
+                        <span id="ocultarLogin">¿No tienes una cuenta? Regístrate aquí!</span>
+                    </div>
                 </form>
 
                 <form id="registroFormulario" action="registro.php" method="POST">
@@ -81,6 +88,10 @@
                         <input id="contrasenna2" name="contrasenna2" type="password" placeholder="Tu contraseña" required>
                     </p>
                     <button type="submit" name="registroBoton">Registrar cuenta</button>
+
+                    <div class="tieneCuentaTexto">
+                        <span id="ocultarRegistro">¿Ya tienes una cuenta? Inicia sesión aquí!</span>
+                    </div>
                 </form>
             </div>
         </div>

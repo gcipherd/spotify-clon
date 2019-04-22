@@ -95,3 +95,12 @@ body {
 #inputContenedor button:hover {
     cursor: pointer;
 }
+
+.tieneCuentaTexto span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tieneCuentaTexto {
+    text-align: center;
+}
