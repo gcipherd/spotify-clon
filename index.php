@@ -17,8 +17,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify (Clon)</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
 </head>
 <body>
-    Bienvenido a Spotify!
+    <div id="barraReproduccionContenedor">
+        <div id="barraReproduccion">
+            <div id="barraReproduccionIzquierda"></div>
+            <div id="barraReproduccionCentro"></div>
+            <div id="barraReproduccionDerecha"></div>
+        </div>
+    </div>
 </body>
 </html>
