@@ -33,3 +33,24 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+#barraReproduccion .contenido {
+    width: 100%;
+}
+
+.reproductorControles .botones {
+    margin: 0 auto;
+    display: table;
+
+}
+
+.botonControl {
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+
+.botonControl img {
+    width: 20px;
+    height: 20px;
+}

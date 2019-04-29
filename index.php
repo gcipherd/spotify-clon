@@ -22,9 +22,36 @@
 <body>
     <div id="barraReproduccionContenedor">
         <div id="barraReproduccion">
-            <div id="barraReproduccionIzquierda"></div>
-            <div id="barraReproduccionCentro"></div>
-            <div id="barraReproduccionDerecha"></div>
+            <div id="barraReproduccionIzquierda">
+                
+            </div>
+            <div id="barraReproduccionCentro">
+                <div class="contenido reproductorControles">
+                    <div class="botones">
+                        <button class="botonControl aleatorio" title="Botón de aleatorio">
+                            <img src="assets/imagenes/iconos/shuffle.png" alt="Aleatorio">
+                        </button>
+                        <button class="botonControl anterior" title="Botón de anterior">
+                            <img src="assets/imagenes/iconos/previous.png" alt="Anterior">
+                        </button>
+                        <button class="botonControl reproducir" title="Botón de reproducir">
+                            <img src="assets/imagenes/iconos/play.png" alt="Reproducir">
+                        </button>
+                        <button class="botonControl pausa" title="Botón de pausa" style="display: none;">
+                            <img src="assets/imagenes/iconos/pause.png" alt="Pausa">
+                        </button>
+                        <button class="botonControl siguiente" title="Botón de siguiente">
+                            <img src="assets/imagenes/iconos/next.png" alt="Siguiente">
+                        </button>
+                        <button class="botonControl repetir" title="Botón de repetir">
+                            <img src="assets/imagenes/iconos/repeat.png" alt="Repetir">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="barraReproduccionDerecha">
+
+            </div>
         </div>
     </div>
 </body>
