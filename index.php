@@ -47,6 +47,16 @@
                             <img src="assets/imagenes/iconos/repeat.png" alt="Repetir">
                         </button>
                     </div>
+
+                    <div class="barraPlayback">
+                        <span class="tiempoProgreso actual">0.00</span>
+                        <div class="barraProgreso">
+                            <div class="barraProgresoBg">
+                                <div class="progreso"></div>
+                            </div>
+                        </div>
+                        <span class="tiempoProgreso restante">0.00</span>
+                    </div>
                 </div>
             </div>
             <div id="barraReproduccionDerecha">
