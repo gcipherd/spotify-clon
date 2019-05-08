@@ -27,6 +27,14 @@
                     <span class="albumLink">
                         <img src="http://clipart-library.com/img/2008830.jpg" alt="Album" class="portadaAlbum">
                     </span>
+                    <div class="infoTrack">
+                        <span class="nombreTrack">
+                            <span>Canción ejemplo</span>
+                        </span>
+                        <span class="nombreArtista">
+                            <span>Artista ejemplo</span>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div id="barraReproduccionCentro">
