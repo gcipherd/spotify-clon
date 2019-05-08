@@ -4,7 +4,8 @@
 
     $zonaHoraria = date_default_timezone_set("America/Mexico_City");
 
-    $con = mysqli_connect("localhost", "root", "", "spotify");
+    $con = mysqli_connect("localhost", "root", "", "spotify"); //Editar con los datos de la BD.
+
     if(mysqli_connect_errno()) {
         echo "Fallo al conectar: " . mysqli_connect_errno();
     }
