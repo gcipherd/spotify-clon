@@ -31,6 +31,11 @@ body {
     min-width: 180px;
 }
 
+#barraReproduccionDerecha {
+    position: relative;
+    margin-top: 16px;
+}
+
 #barraReproduccionCentro {
     width: 40%;
     max-width: 700px;
@@ -129,3 +134,14 @@ body {
     font-size: 12px;
     color: #a0a0a0;
 }
+
+#barraReproduccionDerecha .barraVolumen {
+    width: 180px;
+    position: absolute;
+    right: 0;
+}
+
+#barraReproduccionDerecha .barraVolumen .barraProgreso {
+    width: 125px;
+}
+

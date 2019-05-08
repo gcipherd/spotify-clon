@@ -72,7 +72,16 @@
                 </div>
             </div>
             <div id="barraReproduccionDerecha">
-
+                <div class="barraVolumen">
+                    <button class="botonControl volumen" title="Botón de volúmen">
+                        <img src="assets/imagenes/iconos/volume.png" alt="Volúmen">
+                    </button>
+                    <div class="barraProgreso">
+                        <div class="barraProgresoBg">
+                            <div class="progreso"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
