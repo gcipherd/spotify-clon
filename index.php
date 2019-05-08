@@ -23,7 +23,11 @@
     <div id="barraReproduccionContenedor">
         <div id="barraReproduccion">
             <div id="barraReproduccionIzquierda">
-                
+                <div class="contenido">
+                    <span class="albumLink">
+                        <img src="http://clipart-library.com/img/2008830.jpg" alt="Album" class="portadaAlbum">
+                    </span>
+                </div>
             </div>
             <div id="barraReproduccionCentro">
                 <div class="contenido reproductorControles">
