@@ -20,65 +20,95 @@
     <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
 </head>
 <body>
-    <div id="barraReproduccionContenedor">
-        <div id="barraReproduccion">
-            <div id="barraReproduccionIzquierda">
-                <div class="contenido">
-                    <span class="albumLink">
-                        <img src="http://clipart-library.com/img/2008830.jpg" alt="Album" class="portadaAlbum">
-                    </span>
-                    <div class="infoTrack">
-                        <span class="nombreTrack">
-                            <span>Canción ejemplo</span>
+    <div id="contenedorPrincipal">
+        <div id="contenedorCentral">
+            <div id="contenedorBarraNavegacion">
+                <nav class="barraNavegacion">
+                    <a href="index.php" class="logo">
+                        <img src="assets/imagenes/iconos/logo.png" alt="logo">
+                    </a>
+                    <div class="grupo">
+                        <div class="elementoNavegacion">
+                            <a href="buscar.php" class="elementoLinkNavegacion">Buscar
+                                <img src="assets/imagenes/iconos/search.png" class="icono" alt="Buscar">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grupo">
+                        <div class="elementoNavegacion">
+                            <a href="navegar.php" class="elementoLinkNavegacion">Navegar</a>
+                        </div>
+                        <div class="elementoNavegacion">
+                            <a href="tuMusica.php" class="elementoLinkNavegacion">Tu música</a>
+                        </div>
+                        <div class="elementoNavegacion">
+                            <a href="perfil.php" class="elementoLinkNavegacion">El Yisus</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="barraReproduccionContenedor">
+            <div id="barraReproduccion">
+                <div id="barraReproduccionIzquierda">
+                    <div class="contenido">
+                        <span class="albumLink">
+                            <img src="http://clipart-library.com/img/2008830.jpg" alt="Album" class="portadaAlbum">
                         </span>
-                        <span class="nombreArtista">
-                            <span>Artista ejemplo</span>
-                        </span>
+                        <div class="infoTrack">
+                            <span class="nombreTrack">
+                                <span>Canción ejemplo</span>
+                            </span>
+                            <span class="nombreArtista">
+                                <span>Artista ejemplo</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="barraReproduccionCentro">
-                <div class="contenido reproductorControles">
-                    <div class="botones">
-                        <button class="botonControl aleatorio" title="Botón de aleatorio">
-                            <img src="assets/imagenes/iconos/shuffle.png" alt="Aleatorio">
-                        </button>
-                        <button class="botonControl anterior" title="Botón de anterior">
-                            <img src="assets/imagenes/iconos/previous.png" alt="Anterior">
-                        </button>
-                        <button class="botonControl reproducir" title="Botón de reproducir">
-                            <img src="assets/imagenes/iconos/play.png" alt="Reproducir">
-                        </button>
-                        <button class="botonControl pausa" title="Botón de pausa" style="display: none;">
-                            <img src="assets/imagenes/iconos/pause.png" alt="Pausa">
-                        </button>
-                        <button class="botonControl siguiente" title="Botón de siguiente">
-                            <img src="assets/imagenes/iconos/next.png" alt="Siguiente">
-                        </button>
-                        <button class="botonControl repetir" title="Botón de repetir">
-                            <img src="assets/imagenes/iconos/repeat.png" alt="Repetir">
-                        </button>
-                    </div>
+                <div id="barraReproduccionCentro">
+                    <div class="contenido reproductorControles">
+                        <div class="botones">
+                            <button class="botonControl aleatorio" title="Botón de aleatorio">
+                                <img src="assets/imagenes/iconos/shuffle.png" alt="Aleatorio">
+                            </button>
+                            <button class="botonControl anterior" title="Botón de anterior">
+                                <img src="assets/imagenes/iconos/previous.png" alt="Anterior">
+                            </button>
+                            <button class="botonControl reproducir" title="Botón de reproducir">
+                                <img src="assets/imagenes/iconos/play.png" alt="Reproducir">
+                            </button>
+                            <button class="botonControl pausa" title="Botón de pausa" style="display: none;">
+                                <img src="assets/imagenes/iconos/pause.png" alt="Pausa">
+                            </button>
+                            <button class="botonControl siguiente" title="Botón de siguiente">
+                                <img src="assets/imagenes/iconos/next.png" alt="Siguiente">
+                            </button>
+                            <button class="botonControl repetir" title="Botón de repetir">
+                                <img src="assets/imagenes/iconos/repeat.png" alt="Repetir">
+                            </button>
+                        </div>
 
-                    <div class="barraPlayback">
-                        <span class="tiempoProgreso actual">0.00</span>
+                        <div class="barraPlayback">
+                            <span class="tiempoProgreso actual">0.00</span>
+                            <div class="barraProgreso">
+                                <div class="barraProgresoBg">
+                                    <div class="progreso"></div>
+                                </div>
+                            </div>
+                            <span class="tiempoProgreso restante">0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="barraReproduccionDerecha">
+                    <div class="barraVolumen">
+                        <button class="botonControl volumen" title="Botón de volúmen">
+                            <img src="assets/imagenes/iconos/volume.png" alt="Volúmen">
+                        </button>
                         <div class="barraProgreso">
                             <div class="barraProgresoBg">
                                 <div class="progreso"></div>
                             </div>
-                        </div>
-                        <span class="tiempoProgreso restante">0.00</span>
-                    </div>
-                </div>
-            </div>
-            <div id="barraReproduccionDerecha">
-                <div class="barraVolumen">
-                    <button class="botonControl volumen" title="Botón de volúmen">
-                        <img src="assets/imagenes/iconos/volume.png" alt="Volúmen">
-                    </button>
-                    <div class="barraProgreso">
-                        <div class="barraProgresoBg">
-                            <div class="progreso"></div>
                         </div>
                     </div>
                 </div>
